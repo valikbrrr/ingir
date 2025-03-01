@@ -1,0 +1,953 @@
+.container {
+  position: relative;
+  top: 0;
+
+  width: 100%;
+}
+
+.scrollTop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: fixed;
+  bottom: 6rem;
+  right: 3rem;
+
+  width: 4.5rem;
+  height: 4.5rem;
+
+  background: #8065f7;
+
+  border: none;
+
+  cursor: pointer;
+
+  border-radius: 50%;
+}
+
+.scrollTop svg {
+  width: 3rem;
+  height: 3rem;
+
+  margin-bottom: 0.3rem;
+}
+
+.headerFixed {
+  display: flex;
+  align-items: center;
+
+  position: fixed;
+  top: 0;
+
+  box-sizing: border-box;
+  padding: 0 10rem;
+
+  width: 100%;
+  height: 6.75rem;
+
+  color: #fff;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  z-index: 10;
+}
+
+header .contentWrapper {
+  display: flex;
+
+  height: 2.5rem;
+  width: 100%;
+
+  /* padding: 0 0.8rem; */
+}
+
+.leftContent {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+
+  flex: 1;
+  gap: 1rem;
+}
+
+.leftContent svg {
+  display: flex;
+  align-items: center;
+
+  width: 20rem;
+  height: 2rem;
+}
+
+.leftContent .phoneNumber {
+  font-weight: 700;
+}
+
+.rightContent {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+
+  gap: 1.5rem;
+}
+
+.changeLang {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.russianLang {
+  color: #fff;
+}
+
+.russianLang:hover {
+  text-decoration: none;
+}
+
+.englishLang {
+  color: #f9ec60;
+}
+
+.englishLang:hover {
+  text-decoration: none;
+}
+
+.enter {
+  display: flex;
+  align-items: center;
+
+  gap: 0.5rem;
+
+  text-decoration: none;
+}
+
+.enter svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.enter p {
+  position: relative;
+
+  text-transform: uppercase;
+
+  color: white;
+}
+
+.enter p::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: -0.8px;
+
+  width: 100%;
+  height: 1px;
+
+  border-bottom: 1px dotted;
+  border-color: currentColor;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  height: 26rem;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero .contentWrapper {
+  display: flex;
+  justify-content: space-between;
+
+  flex-direction: column;
+
+  height: 12.5rem;
+  width: 100%;
+
+  padding: 0 10rem;
+
+  color: #fff;
+}
+
+.hero h3 {
+  font-size: 3.5rem;
+  font-weight: normal;
+}
+
+.hero p {
+  font-size: 1.1rem;
+}
+
+.hero button {
+  height: 3rem;
+  width: 13rem;
+
+  background-color: #f9ec60;
+
+  border: none;
+  outline: none;
+
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  text-transform: uppercase;
+
+  transition: 0.3s;
+}
+
+.hero button:hover {
+  background-color: #8065f7;
+  color: #fff;
+}
+
+.ourServices {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 3rem;
+  padding: 4.5rem 10rem;
+
+  width: 100%;
+
+  background-color: #f5f3f1;
+
+  box-sizing: border-box;
+}
+
+.sectionTitle {
+  display: flex;
+  justify-content: center;
+}
+
+.sectionTitle h2 {
+  font-size: 2rem;
+}
+
+.cardsWrap {
+  display: flex;
+  flex-wrap: wrap;
+
+  width: 100%;
+}
+
+.card {
+  flex: 0 0 25%;
+
+  height: 15.75rem;
+
+  box-sizing: border-box;
+
+  text-align: center;
+}
+
+.imageBlock {
+  position: relative;
+
+  height: 100%;
+  width: 100%;
+
+  background-size: cover;
+  background-position: center;
+}
+
+.imageBlock::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background-color: rgba(0, 0, 0, 0.7);
+
+  z-index: 1;
+}
+
+.iconCard {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 4rem;
+  height: 4rem;
+
+  z-index: 2;
+}
+
+.textCard {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: #fff;
+  text-align: start;
+
+  padding: 2rem;
+}
+
+.textCard h3 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.2;
+
+  color: rgb(49, 44, 38);
+
+  margin-bottom: 1.5rem;
+}
+
+.textCard h3::before {
+  position: absolute;
+
+  content: "";
+  width: 3rem;
+  height: 0.3rem;
+
+  bottom: 2rem;
+  left: 2rem;
+
+  background-color: #9b9b9b;
+}
+
+.description {
+  padding: 4.5rem 10rem;
+
+  width: 100%;
+
+  background-color: #fff;
+
+  color: #312c26;
+
+  box-sizing: border-box;
+}
+
+.articleBlock h2 {
+  font-size: 1.75rem;
+  font-weight: 500;
+  color: inherit;
+
+  margin-bottom: 1rem;
+}
+
+.articleBlock p {
+  color: rgb(49, 44, 38);
+
+  margin-bottom: 2rem;
+
+  line-height: 1.4;
+
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.articleBlock ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+
+  list-style: none;
+}
+
+.articleBlock li {
+  position: relative;
+
+  line-height: 2rem;
+}
+
+.articleBlock li::before {
+  content: "";
+
+  position: absolute;
+
+  width: 0.3rem;
+  height: 0.3rem;
+
+  border-radius: 50%;
+
+  background-color: #8065f7;
+
+  left: -1rem;
+  top: 0.9rem;
+}
+
+.ourAdvantages {
+  padding: 4.5rem 10rem;
+
+  width: 100%;
+
+  background-color: #fff;
+
+  color: #312c26;
+
+  box-sizing: border-box;
+}
+
+.ourAdvantagesTitle {
+  margin-bottom: 3rem;
+}
+
+.ourAdvantagesTitle h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 3rem;
+
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.ourAdvantagesTitle h2::before {
+  content: "";
+  border-bottom: 1px solid #ebebeb;
+  flex-grow: 1;
+}
+
+.ourAdvantagesTitle h2::after {
+  content: "";
+  border-bottom: 1px solid #ebebeb;
+  flex-grow: 1;
+}
+
+.ourAdvantagesCards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.ourAdvantagesCards .card {
+  display: flex;
+  justify-content: center;
+
+  gap: 3rem;
+
+  height: 6rem;
+  padding: 1rem;
+}
+
+.ourAdvantagesCards .advantagesIconBlock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #b430dd;
+  position: relative;
+  flex-shrink: 0;
+}
+
+/* .ourAdvantagesCards .advantagesIconBlock::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(90deg, #b430dd 0, #ff5fb2);
+  z-index: -2;
+} */
+
+.ourAdvantagesCards .advantagesTextBlock {
+  display: flex;
+  align-items: center;
+  text-align: left;
+
+  font-size: 0.75rem;
+
+  color: #312c26;
+
+  text-transform: uppercase;
+}
+
+.presentationAndContact {
+  display: flex;
+  padding: 4.5rem 10rem;
+  width: 100%;
+  min-height: 41rem;
+  background-color: #fff;
+  color: #312c26;
+  box-sizing: border-box;
+}
+
+.presentationBlock {
+  width: 35%;
+  padding: 3rem;
+  box-sizing: border-box;
+}
+
+.presentationBlock h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+}
+
+.presentationLink {
+  text-decoration: none;
+}
+
+.presentationWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  height: 4rem;
+  border: 3px solid #000;
+  color: #000;
+  transition: 0.3s;
+}
+
+.presentationWrap:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.presentationWrap:hover svg {
+  filter: brightness(0) invert(1);
+  transition: filter 0.3s;
+}
+
+.presentationWrap p {
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.contactSection {
+  display: flex;
+  flex-grow: 1;
+  position: relative;
+  width: 65%;
+  padding: 3rem;
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.13);
+  flex-direction: column;
+}
+
+.contactSection h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+
+.contactDescription {
+  font-size: 1rem;
+  color: #312c26;
+  margin-bottom: 2rem;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.formRow {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.formGroup {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.formGroup label {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  color: #312c26;
+}
+
+.formGroup input,
+.formGroup textarea {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.formGroup textarea {
+  height: 2rem;
+  resize: vertical;
+  min-height: 100px;
+  flex-grow: 1;
+}
+
+.submitButton {
+  width: 40%;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  background-color: #fff;
+  border: 0.15rem solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(
+    90deg,
+    rgb(180, 48, 221) 0px,
+    rgb(255, 95, 178)
+  );
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.certificates {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4.5rem 10rem;
+  width: 100%;
+  background-color: #f5f3f1;
+  color: #312c26;
+  box-sizing: border-box;
+}
+
+.certificatesTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.certificatesTitle h2 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.sliderCertificates {
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.certificatesContainer {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.certificateBlock {
+  flex: 0 0 25%;
+  padding: 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.certificateImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: none;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  margin: 0 0.25rem;
+  background-color: #bbb;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #333;
+}
+
+/* Стили для модального окна */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background-color: transparent;
+  padding: 0;
+  border-radius: 10px;
+  max-width: 90%;
+  max-height: 90%;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalImage {
+  max-width: 90vw;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.ourClients {
+  display: flex;
+  flex-direction: column;
+  padding: 4.5rem 10rem;
+
+  width: 100%;
+
+  background-color: #fff;
+
+  color: #312c26;
+
+  box-sizing: border-box;
+}
+
+.ourClientsTitle {
+  margin-bottom: 3rem;
+}
+
+.ourClientsTitle h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 3rem;
+
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.ourClientsTitle h2::before {
+  content: "";
+  border-bottom: 1px solid #ebebeb;
+  flex-grow: 1;
+}
+
+.ourClientsTitle h2::after {
+  content: "";
+  border-bottom: 1px solid #ebebeb;
+  flex-grow: 1;
+}
+
+.sliderClients {
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.clientsContainer {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.blockClient {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 20%;
+  padding: 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.clientImage {
+  width: auto;
+  height: auto;
+  display: block;
+  border: none;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.clientImage:hover {
+  filter: grayscale(0%);
+}
+
+.paginationClient {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.dotClient {
+  width: 0.5rem;
+  height: 0.5rem;
+  margin: 0 0.25rem;
+  background-color: #bbb;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dotClient.active {
+  background-color: #333;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  padding: 5rem 0 3rem 0;
+
+  width: 100%;
+
+  background-color: #fff;
+
+  color: #fff;
+
+  box-sizing: border-box;
+}
+
+.footerTop {
+  padding: 0 10rem 5rem 10rem;
+  position: relative;
+}
+
+.footerTop::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 10px;
+  background-color: #ccc;
+}
+
+.logoBlock {
+  margin-bottom: 3rem;
+}
+
+.logoBlock svg {
+  height: 2rem;
+}
+
+.contactInfo {
+  display: flex;
+}
+
+.infoBlock1 {
+  display: flex;
+  flex-direction: column;
+
+  width: 20rem;
+}
+
+.phoneNumberBlock {
+  display: flex;
+  margin-bottom: 1.5rem;
+}
+
+.phoneNumber {
+  text-decoration: none;
+
+  color: #fff;
+
+  font-weight: 500;
+}
+
+.phoneNumberBlock svg {
+  width: 0.9rem;
+  height: 0.9rem;
+
+  fill: #8065f7;
+
+  margin: 0.35rem 0 0 0.3rem;
+}
+
+.infoBlock1 .adress {
+  margin-bottom: 0.5rem;
+}
+
+.infoBlock1 .emailBlock {
+  display: flex;
+  flex-direction: row;
+}
+
+.infoBlock1 .emailBlock a {
+  text-decoration: none;
+
+  color: #fff;
+
+  margin-left: 0.3rem;
+}
+
+.infoBlock3 {
+  flex: 1;
+
+  display: flex;
+  justify-content: end;
+
+  gap: 2rem;
+
+  margin-right: 3rem;
+}
+
+.infoBlock3 .linkedinBlock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 1.5rem;
+  height: 1.5rem;
+
+  padding: 0.1rem;
+
+  fill: #f9ec60;
+}
+
+.infoBlock3 .linkedinBlock svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.infoBlock3 .instagramBlock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 1.4rem;
+  height: 1.4rem;
+
+  padding: 0.1rem;
+
+  background: #f9ec60;
+
+  border-radius: 10%;
+}
+
+.infoBlock3 .instagramBlock svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.footerBottom {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+
+  padding: 5rem 10rem 0 10rem;
+
+  opacity: 40%;
+}
