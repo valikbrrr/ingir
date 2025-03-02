@@ -25,15 +25,9 @@ import {
   CLIENTS_MAP,
 } from "../model/Home.const";
 import { contentBlocks } from "../model/types";
+import { Slider } from "@widgets/slider";
 
 export const Home = () => {
-  const [currentCertificatePage, setCurrentCertificatePage] = useState(0);
-  const [currentClientPage, setCurrentClientPage] = useState(0);
-  const [selectedCertificate, setSelectedCertificate] = useState<string | null>(
-    null
-  );
-  const [isLoading, setIsLoading] = useState(false);
-
   const blocksPerPageCertificates = 4;
   const totalPagesCertificates = Math.ceil(
     CERTIFICATES_MAP.length / blocksPerPageCertificates
@@ -43,48 +37,6 @@ export const Home = () => {
   const totalPagesClients = Math.ceil(
     CLIENTS_MAP.length / blocksPerPageClients - 4
   );
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentClientPage((prevPage) => {
-        const nextPage = prevPage + 1;
-        return nextPage < totalPagesClients ? nextPage : 0; // Вернуться к первой странице
-      });
-    }, 5000); // 3000 мс = 3 секунды
-
-    return () => clearInterval(interval); // Очистить интервал при размонтировании
-  }, [totalPagesClients]);
-
-  // Функция для переключения страниц certific
-  const handleCertificatePageChange = (page: number) => {
-    setCurrentCertificatePage(page);
-  };
-  // Функция для переключения страниц certific
-  const handleClientPageChange = (page: number) => {
-    setCurrentClientPage(page);
-  };
-
-  // Функция для открытия модального окна
-  const handleCertificateClick = (src: string) => {
-    setIsLoading(true);
-    setSelectedCertificate(src);
-
-    // Имитация загрузки изображения
-    const img = new Image();
-    img.src = src;
-    img.onload = () => {
-      setIsLoading(false);
-    };
-  };
-
-  // Функция для закрытия модального окна
-  const closeModal = () => {
-    setSelectedCertificate(null);
-  };
-
-  // Вычисляем смещение для контейнера сертификатов
-  const offsetCertificate = -currentCertificatePage * 100;
-  const offsetClient = -currentClientPage * 20;
 
   const [isHeaderVisible, setIsHeaderVisible] = useState(false);
   const scrollThresholdHeader = 200;
@@ -389,93 +341,22 @@ export const Home = () => {
         <div className={styles.certificatesTitle}>
           <h2>Сертификаты</h2>
         </div>
-        {/* Слайдер */}
-        <div className={styles.sliderCertificates}>
-          <div
-            className={styles.certificatesContainer}
-            style={{ transform: `translateX(${offsetCertificate}%)` }}
-          >
-            {CERTIFICATES_MAP.map((certificate) => (
-              <div
-                key={certificate.id}
-                className={styles.certificateBlock}
-                onClick={() => handleCertificateClick(certificate.src)}
-              >
-                <img
-                  src={certificate.src}
-                  alt={`Сертификат ${certificate.id}`}
-                  className={styles.certificateImage}
-                />
-              </div>
-            ))}
-          </div>
-          {/* Пагинация */}
-          <div className={styles.pagination}>
-            {Array.from({ length: totalPagesCertificates }, (_, index) => (
-              <span
-                key={index}
-                className={`${styles.dot} ${
-                  currentCertificatePage === index ? styles.active : ""
-                }`}
-                onClick={() => handleCertificatePageChange(index)}
-              />
-            ))}
-          </div>
-        </div>
+        <Slider
+          isCertificates={true}
+          offsetNum={100}
+          totalPages={totalPagesCertificates}
+        />
       </section>
-
-      {/* Модальное окно */}
-      {selectedCertificate && (
-        <div className={styles.modalOverlay} onClick={closeModal}>
-          <div
-            className={styles.modalContent}
-            onClick={(e) => e.stopPropagation()}
-          >
-            {isLoading ? (
-              <div className={styles.loader}>Загрузка...</div>
-            ) : (
-              <img
-                src={selectedCertificate}
-                alt="Увеличенный сертификат"
-                className={styles.modalImage}
-              />
-            )}
-          </div>
-        </div>
-      )}
       {/* КЛИЕНТЫ */}
       <section className={styles.ourClients}>
         <div className={styles.ourClientsTitle}>
           <h2>Наши клиенты</h2>
         </div>
-        <div className={styles.sliderClients}>
-          <div
-            className={styles.clientsContainer}
-            style={{ transform: `translateX(${offsetClient}%)` }}
-          >
-            {CLIENTS_MAP.map((client) => (
-              <div key={client.id} className={styles.blockClient}>
-                <img
-                  src={client.src}
-                  alt={`Клиент ${client.id}`}
-                  className={styles.clientImage}
-                />
-              </div>
-            ))}
-          </div>
-          {/* Пагинация */}
-          <div className={styles.paginationClient}>
-            {Array.from({ length: totalPagesClients }, (_, index) => (
-              <span
-                key={index}
-                className={`${styles.dotClient} ${
-                  currentClientPage === index ? styles.active : ""
-                }`}
-                onClick={() => handleClientPageChange(index)}
-              />
-            ))}
-          </div>
-        </div>
+        <Slider
+          isCertificates={false}
+          offsetNum={20}
+          totalPages={totalPagesClients}
+        />
       </section>
       <footer
         className={styles.footer}
