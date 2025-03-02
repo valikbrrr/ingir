@@ -528,7 +528,7 @@ export const Home = () => {
           </div>
         </div>
         <div className={styles.footerBottom}>
-          Все права защищены
+          <p>Все права защищены</p>
         </div>
       </footer>
     </div>

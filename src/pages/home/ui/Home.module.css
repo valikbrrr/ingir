@@ -24,6 +24,8 @@
   cursor: pointer;
 
   border-radius: 50%;
+
+  z-index: 100;
 }
 
 .scrollTop svg {
@@ -831,8 +833,9 @@ header .contentWrapper {
   left: 0;
   right: 0;
   bottom: 0;
-  height: 10px;
+  height: 1px;
   background-color: #ccc;
+  z-index: 0;
 }
 
 .logoBlock {
@@ -947,7 +950,9 @@ header .contentWrapper {
   align-items: center;
   justify-content: start;
 
-  padding: 5rem 10rem 0 10rem;
+  padding: 3rem 10rem 0 10rem;
+}
 
+.footerBottom p {
   opacity: 40%;
 }
