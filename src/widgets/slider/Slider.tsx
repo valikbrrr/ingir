@@ -1,50 +1,33 @@
 import styles from "./Slider.module.css";
-import { CERTIFICATES_MAP, CLIENTS_MAP } from "@pages/home";
-import { useEffect, useState } from "react";
+import { JSX, useEffect, useState } from "react";
 
 interface SliderProps {
+  dataMap: () => JSX.Element[];
   isCertificates: boolean;
   offsetNum: number;
   totalPages: number;
+  onCertificateClick?: (src: string) => void; // Функция для обработки клика по сертификату
+  selectedCertificate?: string | null; // Выбранный сертификат
+  isLoading?: boolean; // Состояние загрузки
+  onCloseModal?: () => void; // Функция для закрытия модального окна
 }
 
 export const Slider: React.FC<SliderProps> = ({
-  dataMap
+  dataMap,
   isCertificates,
   offsetNum,
   totalPages,
+  selectedCertificate,
+  isLoading,
+  onCloseModal,
 }) => {
-    
-  // ????????????????? =>
-  let isClients;
-  isCertificates || (isClients = true);
-
   const [currentCertificatePage, setCurrentCertificatePage] = useState(0);
   const [currentClientPage, setCurrentClientPage] = useState(0);
-  const [isLoading, setIsLoading] = useState(false);
-  const [selectedCertificate, setSelectedCertificate] = useState<string | null>(
-    null
-  );
 
   const handlePageChange = (page: number) => {
     isCertificates
       ? setCurrentCertificatePage(page)
       : setCurrentClientPage(page);
-  };
-
-  const handleCertificateClick = (src: string) => {
-    setIsLoading(true);
-    setSelectedCertificate(src);
-
-    const img = new Image();
-    img.src = src;
-    img.onload = () => {
-      setIsLoading(false);
-    };
-  };
-
-  const closeModal = () => {
-    setSelectedCertificate(null);
   };
 
   useEffect(() => {
@@ -72,29 +55,6 @@ export const Slider: React.FC<SliderProps> = ({
         }}
       >
         {dataMap()}
-        {isCertificates
-          ? CERTIFICATES_MAP.map((certificate) => (
-              <div
-                key={certificate.id}
-                className={styles.certificateBlock}
-                onClick={() => handleCertificateClick(certificate.src)}
-              >
-                <img
-                  src={certificate.src}
-                  alt={`Сертификат ${certificate.id}`}
-                  className={styles.certificateImage}
-                />
-              </div>
-            ))
-          : CLIENTS_MAP.map((client) => (
-              <div key={client.id} className={styles.blockClient}>
-                <img
-                  src={client.src}
-                  alt={`Клиент ${client.id}`}
-                  className={styles.clientImage}
-                />
-              </div>
-            ))}
       </div>
       <div className={styles.pagination}>
         {Array.from({ length: totalPages }, (_, index) => (
@@ -107,8 +67,9 @@ export const Slider: React.FC<SliderProps> = ({
           />
         ))}
       </div>
+      {/* Модальное окно для сертификатов */}
       {selectedCertificate && (
-        <div className={styles.modalOverlay} onClick={closeModal}>
+        <div className={styles.modalOverlay} onClick={onCloseModal}>
           <div
             className={styles.modalContent}
             onClick={(e) => e.stopPropagation()}

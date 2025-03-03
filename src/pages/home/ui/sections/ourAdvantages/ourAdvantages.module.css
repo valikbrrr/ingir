@@ -1,0 +1,86 @@
+.ourAdvantages {
+  padding: 4.5rem 10rem;
+
+  width: 100%;
+
+  background-color: #fff;
+
+  color: #312c26;
+
+  box-sizing: border-box;
+}
+
+.ourAdvantagesTitle {
+  margin-bottom: 3rem;
+}
+
+.ourAdvantagesTitle h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 3rem;
+
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.ourAdvantagesTitle h2::before {
+  content: "";
+  border-bottom: 1px solid #ebebeb;
+  flex-grow: 1;
+}
+
+.ourAdvantagesTitle h2::after {
+  content: "";
+  border-bottom: 1px solid #ebebeb;
+  flex-grow: 1;
+}
+
+.ourAdvantagesCards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.ourAdvantagesCards .card {
+  display: flex;
+  justify-content: center;
+
+  gap: 3rem;
+
+  height: 6rem;
+  padding: 1rem;
+}
+
+.ourAdvantagesCards .advantagesIconBlock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+
+  width: 4rem;
+  height: 4rem;
+
+  border-radius: 50%;
+
+  overflow: hidden;
+
+  border: 2px solid #b430dd;
+  
+  flex-shrink: 0;
+}
+
+.ourAdvantagesCards .advantagesTextBlock {
+  display: flex;
+  align-items: center;
+  text-align: left;
+
+  font-size: 0.75rem;
+
+  color: #312c26;
+
+  text-transform: uppercase;
+}

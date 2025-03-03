@@ -1,0 +1,122 @@
+.headerFixed {
+  display: flex;
+  align-items: center;
+
+  position: fixed;
+  top: 0;
+
+  box-sizing: border-box;
+  padding: 0 10rem;
+
+  width: 100%;
+  height: 6.75rem;
+
+  color: #fff;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  z-index: 10;
+}
+
+header .contentWrapper {
+  display: flex;
+
+  height: 2.5rem;
+  width: 100%;
+}
+
+.phoneNumber {
+  text-decoration: none;
+
+  color: #fff;
+
+  font-weight: 500;
+}
+
+.leftContent {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+
+  flex: 1;
+  gap: 1rem;
+}
+
+.leftContent svg {
+  display: flex;
+  align-items: center;
+
+  width: 20rem;
+  height: 2rem;
+}
+
+.leftContent .phoneNumber {
+  font-weight: 700;
+}
+
+.rightContent {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+
+  gap: 1.5rem;
+}
+
+.changeLang {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.russianLang {
+  color: #fff;
+}
+
+.russianLang:hover {
+  text-decoration: none;
+}
+
+.englishLang {
+  color: #f9ec60;
+}
+
+.englishLang:hover {
+  text-decoration: none;
+}
+
+.enter {
+  display: flex;
+  align-items: center;
+
+  gap: 0.5rem;
+
+  text-decoration: none;
+}
+
+.enter svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.enter p {
+  position: relative;
+
+  text-transform: uppercase;
+
+  color: white;
+}
+
+.enter p::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: -0.8px;
+
+  width: 100%;
+  height: 1px;
+
+  border-bottom: 1px dotted;
+  border-color: currentColor;
+}

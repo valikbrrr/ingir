@@ -1,0 +1,189 @@
+.ContactWithUs {
+  display: flex;
+
+  padding: 4.5rem 10rem;
+
+  width: 100%;
+  min-height: 41rem;
+
+  background-color: #fff;
+  color: #312c26;
+
+  box-sizing: border-box;
+}
+
+.presentationBlock {
+  width: 35%;
+  padding: 3rem;
+
+  box-sizing: border-box;
+}
+
+.presentationBlock h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+
+  margin-bottom: 3rem;
+}
+
+.presentationLink {
+  text-decoration: none;
+}
+
+.presentationWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 1rem;
+  height: 4rem;
+
+  border: 3px solid #000;
+  color: #000;
+
+  transition: 0.3s;
+}
+
+.presentationWrap:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.presentationWrap:hover svg {
+  filter: brightness(0) invert(1);
+
+  transition: filter 0.3s;
+}
+
+.presentationWrap p {
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.contactSection {
+  display: flex;
+
+  flex-grow: 1;
+  position: relative;
+
+  width: 65%;
+  padding: 3rem;
+
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.13);
+  flex-direction: column;
+}
+
+.contactSection h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+
+  margin-bottom: 1.5rem;
+}
+
+.contactDescription {
+  font-size: 1rem;
+  color: #312c26;
+
+  margin-bottom: 2rem;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.formRow {
+  display: flex;
+
+  gap: 1rem;
+
+  margin-bottom: 1rem;
+}
+
+.formGroup {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.formGroup label {
+  font-size: 0.9rem;
+
+  margin-bottom: 0.5rem;
+  color: #312c26;
+}
+
+.formGroup input,
+.formGroup textarea {
+  padding: 0.5rem;
+  font-size: 1rem;
+
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.formGroup textarea {
+  height: 2rem;
+  resize: vertical;
+
+  min-height: 100px;
+  flex-grow: 1;
+}
+
+.fileInput {
+  display: none;
+}
+
+.fileLabel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 0.5rem;
+  padding: 0.4rem;
+
+  font-size: 1rem;
+  font-weight: 700;
+  color: #312c26;
+
+  text-decoration: underline;
+  background-color: #fff;
+
+  border: 1px solid #ccc;
+  border-radius: 4px;
+
+  cursor: pointer;
+
+  transition: border-color 0.3s ease;
+}
+
+.fileLabel svg {
+  width: 1.2rem;
+  height: 1.2rem;
+  
+  fill: #312c26;
+}
+
+.submitButton {
+  width: 40%;
+  padding: 1rem;
+
+  font-size: 1rem;
+  font-weight: 700;
+
+  background-color: #fff;
+
+  border: 0.15rem solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(
+    90deg,
+    rgb(180, 48, 221) 0px,
+    rgb(255, 95, 178)
+  );
+
+  cursor: pointer;
+
+  margin-top: 1rem;
+}

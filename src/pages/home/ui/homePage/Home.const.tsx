@@ -1,30 +1,3 @@
-import { AutomaticBlockIcon, CleaningBlockIcon, CoolingBlockIcon, ElectroBlockIcon, EngineeringBlockIcon, FireAlarmBlockIcon, HeatBlockIcon, WaterBlockIcon } from "@shared/assets";
-import styles from "../ui/Home.module.css";
-
-import { ReactNode } from "react";
-
-export const CARD_INDEX_TO_IMAGE_MAP: Record<number, string> = {
-  1: "src/shared/assets/images/waterBlockBg.jpg",
-  3: "src/shared/assets/images/engineeringBlockBg.jpg",
-  6: "src/shared/assets/images/electroBlockBg.jpg",
-  8: "src/shared/assets/images/heatBlockBg.jpg",
-  9: "src/shared/assets/images/coolingBlockBg.jpg",
-  11: "src/shared/assets/images/fireAlarmBlockBg.jpg",
-  14: "src/shared/assets/images/cleaningBlockBg.jpg",
-  16: "src/shared/assets/images/automaticBlockBg.jpg",
-};
-
-export const CARD_INDEX_TO_ICON_MAP: Record<number, ReactNode> = {
-  1: <EngineeringBlockIcon className={styles.iconCard} />,
-  3: <WaterBlockIcon className={styles.iconCard} />,
-  6: <ElectroBlockIcon className={styles.iconCard} />,
-  8: <HeatBlockIcon className={styles.iconCard} />,
-  9: <CoolingBlockIcon className={styles.iconCard} />,
-  11: <FireAlarmBlockIcon className={styles.iconCard} />,
-  14: <CleaningBlockIcon className={styles.iconCard} />,
-  16: <AutomaticBlockIcon className={styles.iconCard} />,
-};
-
 export const CERTIFICATES_MAP = [
   { id: 1, src: "src/shared/assets/images/certificate1.jpg" },
   { id: 2, src: "src/shared/assets/images/certificate2.jpg" },

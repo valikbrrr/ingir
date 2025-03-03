@@ -1,0 +1,152 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  padding: 5rem 0 3rem 0;
+
+  width: 100%;
+
+  background-color: #fff;
+
+  color: #fff;
+
+  box-sizing: border-box;
+}
+
+.footerTop {
+  position: relative;
+  padding: 0 10rem 5rem 10rem;
+}
+
+.footerTop::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 1px;
+
+  background-color: #ccc;
+
+  z-index: 0;
+}
+
+.logoBlock {
+  margin-bottom: 3rem;
+}
+
+.logoBlock svg {
+  height: 2rem;
+}
+
+.contactInfo {
+  display: flex;
+}
+
+.infoBlock1 {
+  display: flex;
+  flex-direction: column;
+
+  width: 20rem;
+}
+
+.phoneNumberBlock {
+  display: flex;
+  margin-bottom: 1.5rem;
+}
+
+.phoneNumber {
+  text-decoration: none;
+
+  color: #fff;
+
+  font-weight: 500;
+}
+
+.phoneNumberBlock svg {
+  width: 0.9rem;
+  height: 0.9rem;
+
+  fill: #8065f7;
+
+  margin: 0.35rem 0 0 0.3rem;
+}
+
+.infoBlock1 .adress {
+  margin-bottom: 0.5rem;
+}
+
+.infoBlock1 .emailBlock {
+  display: flex;
+  flex-direction: row;
+}
+
+.infoBlock1 .emailBlock a {
+  text-decoration: none;
+
+  color: #fff;
+
+  margin-left: 0.3rem;
+}
+
+.infoBlock3 {
+  flex: 1;
+
+  display: flex;
+  justify-content: end;
+
+  gap: 2rem;
+
+  margin-right: 3rem;
+}
+
+.infoBlock3 .linkedinBlock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 1.5rem;
+  height: 1.5rem;
+
+  padding: 0.1rem;
+
+  fill: #f9ec60;
+}
+
+.infoBlock3 .linkedinBlock svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.infoBlock3 .instagramBlock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 1.4rem;
+  height: 1.4rem;
+
+  padding: 0.1rem;
+
+  background: #f9ec60;
+
+  border-radius: 10%;
+}
+
+.infoBlock3 .instagramBlock svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.footerBottom {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+
+  padding: 3rem 10rem 0 10rem;
+}
+
+.footerBottom p {
+  opacity: 40%;
+}
