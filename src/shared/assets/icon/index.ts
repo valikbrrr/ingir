@@ -16,6 +16,7 @@ import ArrowTop from "./arrowTop.svg?react";
 import PhoneIcon from "./phoneIcon.svg?react";
 import InstagramIcon from "./instagramIcon.svg?react";
 import LinkedinIcon from "./linkedinIcon.svg?react";
+import UploadIcon from "./uploadIcon.svg?react";
 
 export {
   LogIcon,
@@ -36,4 +37,5 @@ export {
   PhoneIcon,
   InstagramIcon,
   LinkedinIcon,
+  UploadIcon,
 };

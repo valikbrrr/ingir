@@ -1,4 +1,4 @@
-import { Home } from "@pages/home/ui/Home";
+import { Home } from "@pages/home/ui/homePage/Home";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {

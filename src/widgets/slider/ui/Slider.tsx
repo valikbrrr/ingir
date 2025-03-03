@@ -9,10 +9,13 @@ interface SliderProps {
 }
 
 export const Slider: React.FC<SliderProps> = ({
+  dataMap
   isCertificates,
   offsetNum,
   totalPages,
 }) => {
+    
+  // ????????????????? =>
   let isClients;
   isCertificates || (isClients = true);
 
@@ -68,6 +71,7 @@ export const Slider: React.FC<SliderProps> = ({
           transform: `translateX(${offset}%)`,
         }}
       >
+        {dataMap()}
         {isCertificates
           ? CERTIFICATES_MAP.map((certificate) => (
               <div

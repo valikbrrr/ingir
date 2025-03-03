@@ -455,17 +455,6 @@ header .contentWrapper {
   flex-shrink: 0;
 }
 
-/* .ourAdvantagesCards .advantagesIconBlock::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: linear-gradient(90deg, #b430dd 0, #ff5fb2);
-  z-index: -2;
-} */
-
 .ourAdvantagesCards .advantagesTextBlock {
   display: flex;
   align-items: center;
@@ -590,6 +579,38 @@ header .contentWrapper {
   resize: vertical;
   min-height: 100px;
   flex-grow: 1;
+}
+
+.fileInput {
+  display: none;
+}
+
+.fileLabel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 0.5rem;
+  padding: 0.4rem;
+
+  font-size: 1rem;
+  font-weight: 700;
+  color: #312c26;
+  text-decoration: underline;
+
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+
+  cursor: pointer;
+
+  transition: border-color 0.3s ease;
+}
+
+.fileLabel svg {
+  width: 1.2rem;
+  height: 1.2rem;
+  fill: #312c26;
 }
 
 .submitButton {

@@ -17,15 +17,17 @@ import {
   RequestIcon,
   StafIcon,
   UniformOrderIcon,
+  UploadIcon,
 } from "@shared/assets/icon";
 import {
   CARD_INDEX_TO_ICON_MAP,
   CARD_INDEX_TO_IMAGE_MAP,
   CERTIFICATES_MAP,
   CLIENTS_MAP,
-} from "../model/Home.const";
-import { contentBlocks } from "../model/types";
+} from "../../model/Home.const";
+import { contentBlocks } from "../../model/types";
 import { Slider } from "@widgets/slider";
+import { Header } from "../sections/header";
 
 export const Home = () => {
   const blocksPerPageCertificates = 4;
@@ -38,20 +40,8 @@ export const Home = () => {
     CLIENTS_MAP.length / blocksPerPageClients - 4
   );
 
-  const [isHeaderVisible, setIsHeaderVisible] = useState(false);
-  const scrollThresholdHeader = 200;
   const [isScrollTopVisible, setIsScrollTopVisible] = useState(false);
   const scrollThresholdScrollTop = 400;
-
-  const handleScrollForHeader = () => {
-    const scrollY = window.scrollY;
-
-    if (scrollY > scrollThresholdHeader) {
-      setIsHeaderVisible(true);
-    } else {
-      setIsHeaderVisible(false);
-    }
-  };
 
   const handleScrollForScrollTop = () => {
     const scrollY = window.scrollY;
@@ -71,13 +61,6 @@ export const Home = () => {
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScrollForHeader);
-    return () => {
-      window.removeEventListener("scroll", handleScrollForHeader);
-    };
-  }, []);
-
-  useEffect(() => {
     window.addEventListener("scroll", handleScrollForScrollTop);
     return () => {
       window.removeEventListener("scroll", handleScrollForScrollTop);
@@ -86,14 +69,13 @@ export const Home = () => {
 
   return (
     <div className={styles.container}>
-      {isScrollTopVisible ? (
+      {isScrollTopVisible && (
         <button className={styles.scrollTop} onClick={moveUp}>
           <ArrowTop />
         </button>
-      ) : (
-        ""
       )}
-      <header
+      <Header/>
+      {/* <header
         className={styles.headerFixed}
         style={{
           backgroundImage: isHeaderVisible ? `url(${bgHeader})` : "none",
@@ -123,7 +105,7 @@ export const Home = () => {
             </a>
           </div>
         </div>
-      </header>
+      </header> */}
       <section
         className={styles.hero}
         style={{
@@ -267,7 +249,10 @@ export const Home = () => {
           }}
         >
           <h2>Ознакомьтесь с нашей презентацией</h2>
-          <a href="" className={styles.presentationLink}>
+          <a
+            href="https://engir.by/sites/default/files/2020-09/engir_f4_less-color2.pdf"
+            className={styles.presentationLink}
+          >
             <div className={styles.presentationWrap}>
               <PresentationIcon />
               <p>Presentation</p>
@@ -317,8 +302,17 @@ export const Home = () => {
                   type="file"
                   id="file"
                   name="file"
-                  placeholder="Загрузить файл"
+                  className={styles.fileInput}
+                  onChange={(e) => {
+                    if (e.target.files && e.target.files[0]) {
+                      console.log("Выбран файл:", e.target.files[0].name);
+                    }
+                  }}
                 />
+                <label htmlFor="file" className={styles.fileLabel}>
+                  <UploadIcon />
+                  <span>Загрузить файл</span>
+                </label>
               </div>
             </div>
             <div className={styles.formGroup}>
@@ -353,6 +347,7 @@ export const Home = () => {
           <h2>Наши клиенты</h2>
         </div>
         <Slider
+          dataMap={()=> CERTIFICATES_MAP.map(…..)}
           isCertificates={false}
           offsetNum={20}
           totalPages={totalPagesClients}
