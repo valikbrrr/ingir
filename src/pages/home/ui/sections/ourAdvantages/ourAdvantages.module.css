@@ -41,14 +41,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 8rem;
 }
 
 .ourAdvantagesCards .card {
   display: flex;
   justify-content: center;
 
-  gap: 3rem;
+  gap: 2rem;
 
   height: 6rem;
   padding: 1rem;
@@ -69,18 +69,18 @@
   overflow: hidden;
 
   border: 2px solid #b430dd;
-  
+
   flex-shrink: 0;
 }
 
 .ourAdvantagesCards .advantagesTextBlock {
-  display: flex;
-  align-items: center;
-  text-align: left;
+  margin-top: 1rem;
+
+  text-align: center;
+
+  white-space: pre-line;
 
   font-size: 0.75rem;
-
   color: #312c26;
-
   text-transform: uppercase;
 }
