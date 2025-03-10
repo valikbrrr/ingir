@@ -6,15 +6,33 @@ export const OurAdvantages = () => {
   const advantagesCards = [
     {
       icon: <StafIcon />,
-      text: "Квалифицированный\nперсонал",
+      text: (
+        <p>
+          Квалифицированный
+          <br />
+          персонал
+        </p>
+      ),
     },
     {
       icon: <RequestIcon />,
-      text: "Онлайн подача\nзаявок 24/7",
+      text: (
+        <p>
+          Онлайн подача
+          <br />
+          заявок 24/7
+        </p>
+      ),
     },
     {
       icon: <UniformOrderIcon />,
-      text: "Единый\nподрядчик",
+      text: (
+        <p>
+          Единый
+          <br />
+          подрядчик
+        </p>
+      ),
     },
   ];
 
@@ -28,14 +46,7 @@ export const OurAdvantages = () => {
         {advantagesCards.map((card, index) => (
           <div key={index} className={styles.card}>
             <div className={styles.advantagesIconBlock}>{card.icon}</div>
-            <div className={styles.advantagesTextBlock}>
-              {card.text.split("\n").map((line, i) => (
-                <span key={i}>
-                  {line}
-                  <br />
-                </span>
-              ))}
-            </div>
+            <div className={styles.advantagesTextBlock}>{card.text}</div>
           </div>
         ))}
       </div>

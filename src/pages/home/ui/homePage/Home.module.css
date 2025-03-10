@@ -1,6 +1,5 @@
 .container {
   position: relative;
-  top: 0;
 
   width: 100%;
 }
@@ -54,7 +53,7 @@
 }
 
 .certificatesTitle h2 {
-  font-size: 2rem;
+  font-size: clamp(1rem, 2vw, 3rem);
   font-weight: 700;
 }
 
@@ -102,7 +101,7 @@
 
   gap: 3rem;
 
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 2vw, 3rem);
   font-weight: 700;
 }
 
@@ -147,3 +146,4 @@
 .clientImage:hover {
   filter: grayscale(0%);
 }
+

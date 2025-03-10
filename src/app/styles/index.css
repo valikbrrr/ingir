@@ -16,7 +16,6 @@
 }
 
 #root {
-  background: green;
   display: flex;
   justify-content: center;
 }

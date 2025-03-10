@@ -8,6 +8,17 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+  z-index: 1;
 }
 
 .hero .contentWrapper {
@@ -16,21 +27,26 @@
 
   flex-direction: column;
 
-  height: 12.5rem;
+  height: auto;
   width: 100%;
 
   padding: 0 10rem;
 
   color: #fff;
+
+  z-index: 2;
 }
 
 .hero h3 {
-  font-size: 3.5rem;
+  font-size: clamp(3rem, 3vw, 4rem);
   font-weight: normal;
+
+  margin-bottom: 1rem;
 }
 
 .hero p {
-  font-size: 1.1rem;
+  font-size: clamp(1.1rem, 1.2vw, 1.7rem);
+  margin-bottom: 2rem;
 }
 
 .hero button {
@@ -54,4 +70,19 @@
   background-color: #8065f7;
   color: #fff;
   cursor: pointer;
+}
+
+@media (min-width: 1920px) {
+  .hero .contentWrapper {
+    padding: 0 20rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .hero button {
+    height: 4rem;
+    width: 14rem;
+
+    font-size: 1.2rem;
+  }
 }
