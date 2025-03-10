@@ -1,13 +1,13 @@
 import EngirLogo from "./engirLogo.svg?react";
 import LogIcon from "./logIcon.svg?react";
-import WaterBlockIcon from "./waterBlockIcon.svg?react";
-import EngineeringBlockIcon from "./engineeringBlockIcon.svg?react";
-import ElectroBlockIcon from "./electroBlockIcon.svg?react";
-import HeatBlockIcon from "./heatBlockIcon.svg?react";
-import CoolingBlockIcon from "./coolingBlockIcon.svg?react";
-import FireAlarmBlockIcon from "./fireAlarmBlockIcon.svg?react";
-import CleaningBlockIcon from "./cleaningBlockIcon.svg?react";
-import AutomaticBlockIcon from "./automaticBlockIcon.svg?react";
+// import WaterBlockIcon from "./waterBlockIcon.svg?react";
+// import EngineeringBlockIcon from "./engineeringBlockIcon.svg?react";
+// import ElectroBlockIcon from "./electroBlockIcon.svg?react";
+// import HeatBlockIcon from "./heatBlockIcon.svg?react";
+// import CoolingBlockIcon from "./coolingBlockIcon.svg?react";
+// import FireAlarmBlockIcon from "./fireAlarmBlockIcon.svg?react";
+// import CleaningBlockIcon from "./cleaningBlockIcon.svg?react";
+// import AutomaticBlockIcon from "./automaticBlockIcon.svg?react";
 import StafIcon from "./staf.svg?react";
 import RequestIcon from "./request.svg?react";
 import UniformOrderIcon from "./uniformOrder.svg?react";
@@ -20,14 +20,6 @@ import UploadIcon from "./uploadIcon.svg?react";
 
 export {
   LogIcon,
-  WaterBlockIcon,
-  EngineeringBlockIcon,
-  ElectroBlockIcon,
-  HeatBlockIcon,
-  CoolingBlockIcon,
-  FireAlarmBlockIcon,
-  CleaningBlockIcon,
-  AutomaticBlockIcon,
   StafIcon,
   RequestIcon,
   UniformOrderIcon,

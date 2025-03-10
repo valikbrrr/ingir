@@ -1,15 +1,4 @@
-import { ReactNode } from "react";
 import styles from "./OurServices.module.css";
-import {
-  AutomaticBlockIcon,
-  CleaningBlockIcon,
-  CoolingBlockIcon,
-  ElectroBlockIcon,
-  EngineeringBlockIcon,
-  FireAlarmBlockIcon,
-  HeatBlockIcon,
-  WaterBlockIcon,
-} from "@shared/assets";
 
 const contentBlocks = [
   {
@@ -86,28 +75,6 @@ const contentBlocks = [
   },
 ];
 
-const CARD_INDEX_TO_IMAGE_MAP: Record<number, string> = {
-  1: "src/shared/assets/images/waterBlockBg.jpg",
-  3: "src/shared/assets/images/engineeringBlockBg.jpg",
-  6: "src/shared/assets/images/electroBlockBg.jpg",
-  8: "src/shared/assets/images/heatBlockBg.jpg",
-  9: "src/shared/assets/images/coolingBlockBg.jpg",
-  11: "src/shared/assets/images/fireAlarmBlockBg.jpg",
-  14: "src/shared/assets/images/cleaningBlockBg.jpg",
-  16: "src/shared/assets/images/automaticBlockBg.jpg",
-};
-
-const CARD_INDEX_TO_ICON_MAP: Record<number, ReactNode> = {
-  1: <EngineeringBlockIcon className={styles.iconCard} />,
-  3: <WaterBlockIcon className={styles.iconCard} />,
-  6: <ElectroBlockIcon className={styles.iconCard} />,
-  8: <HeatBlockIcon className={styles.iconCard} />,
-  9: <CoolingBlockIcon className={styles.iconCard} />,
-  11: <FireAlarmBlockIcon className={styles.iconCard} />,
-  14: <CleaningBlockIcon className={styles.iconCard} />,
-  16: <AutomaticBlockIcon className={styles.iconCard} />,
-};
-
 export const OurServices = () => {
   return (
     <section className={styles.ourServices}>
@@ -119,24 +86,17 @@ export const OurServices = () => {
           <div key={index} className={styles.card}>
             {block.type === "image" ? (
               (() => {
-                const icon = Object.keys(CARD_INDEX_TO_ICON_MAP).includes(
-                  String(block.id)
-                );
-
-                const images = Object.keys(CARD_INDEX_TO_IMAGE_MAP).includes(
-                  String(block.id)
-                );
+                const iconUrl = `src/shared/assets/images/services/icons/${block.id}.svg`;
+                const bgUrl = `src/shared/assets/images/services/bgs/${block.id}.jpg`;
 
                 return (
                   <div
                     className={styles.imageBlock}
                     style={{
-                      backgroundImage: `url(${
-                        images ? CARD_INDEX_TO_IMAGE_MAP[block.id] : ""
-                      })`,
+                      backgroundImage: `url(${bgUrl})`,
                     }}
                   >
-                    {icon && CARD_INDEX_TO_ICON_MAP[block.id]}
+                    {<img src={iconUrl} className={styles.iconCard} />}
                   </div>
                 );
               })()
