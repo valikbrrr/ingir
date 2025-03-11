@@ -19,16 +19,6 @@ export const Home = () => {
     null
   );
 
-  const blocksPerPageCertificates = 4;
-  const totalPagesCertificates = Math.ceil(
-    CERTIFICATES_MAP.length / blocksPerPageCertificates
-  );
-
-  const blocksPerPageClients = 1;
-  const totalPagesClients = Math.ceil(
-    CLIENTS_MAP.length / blocksPerPageClients - 4
-  );
-
   const [isScrollTopVisible, setIsScrollTopVisible] = useState(false);
   const scrollThresholdScrollTop = 400;
 
@@ -106,8 +96,7 @@ export const Home = () => {
             ))
           }
           isCertificates={true}
-          offsetNum={100}
-          totalPages={totalPagesCertificates}
+          totalPages={CERTIFICATES_MAP.length}
           selectedCertificate={selectedCertificate}
           isLoading={isLoading}
           onCloseModal={closeModal}
@@ -131,8 +120,7 @@ export const Home = () => {
             ))
           }
           isCertificates={false}
-          offsetNum={20}
-          totalPages={totalPagesClients}
+          totalPages={CLIENTS_MAP.length}
         />
       </section>
       <Footer />

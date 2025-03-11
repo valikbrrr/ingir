@@ -10,8 +10,8 @@
   justify-content: center;
 
   position: fixed;
-  bottom: 6rem;
-  right: 3rem;
+  bottom: 6vw;
+  right: 3vw;
 
   width: 4.5rem;
   height: 4.5rem;
@@ -35,14 +35,14 @@
 }
 
 .certificates {
-  display: flex;
+   /* display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: center; */
   padding: 4.5rem 10rem;
-  width: 100%;
-  background-color: #f5f3f1;
+  /* width: 100%; */
+  /* background-color: #f5f3f1; */
   color: #312c26;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
 }
 
 .certificatesTitle {
@@ -58,11 +58,11 @@
 }
 
 .certificateBlock {
-  flex: 0 0 25%;
+  /* flex: 0 0 50%;
 
   padding: 10px;
 
-  box-sizing: border-box;
+  box-sizing: border-box; */
 
   cursor: pointer;
 }
@@ -147,3 +147,8 @@
   filter: grayscale(0%);
 }
 
+@media (max-width: 1000px) {
+  .certificateBlock {
+    flex: 0 0 50%;
+  }
+}

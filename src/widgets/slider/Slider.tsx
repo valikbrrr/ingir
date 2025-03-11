@@ -1,72 +1,45 @@
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Autoplay } from "swiper/modules";
+import "swiper/swiper-bundle.css";
 import styles from "./Slider.module.css";
-import { JSX, useEffect, useState } from "react";
+import { JSX } from "react";
 
 interface SliderProps {
   dataMap: () => JSX.Element[];
   isCertificates: boolean;
-  offsetNum: number;
   totalPages: number;
-  onCertificateClick?: (src: string) => void; // Функция для обработки клика по сертификату
-  selectedCertificate?: string | null; // Выбранный сертификат
-  isLoading?: boolean; // Состояние загрузки
-  onCloseModal?: () => void; // Функция для закрытия модального окна
+  onCertificateClick?: (src: string) => void;
+  selectedCertificate?: string | null;
+  isLoading?: boolean;
+  onCloseModal?: () => void;
 }
 
 export const Slider: React.FC<SliderProps> = ({
   dataMap,
   isCertificates,
-  offsetNum,
-  totalPages,
   selectedCertificate,
   isLoading,
   onCloseModal,
 }) => {
-  const [currentCertificatePage, setCurrentCertificatePage] = useState(0);
-  const [currentClientPage, setCurrentClientPage] = useState(0);
-
-  const handlePageChange = (page: number) => {
-    isCertificates
-      ? setCurrentCertificatePage(page)
-      : setCurrentClientPage(page);
-  };
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentClientPage((prevPage) => {
-        const nextPage = prevPage + 1;
-        return nextPage < totalPages ? nextPage : 0;
-      });
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, [totalPages]);
-
-  const offset =
-    (isCertificates ? -currentCertificatePage : -currentClientPage) * offsetNum;
-
-  let currentPage = isCertificates ? currentCertificatePage : currentClientPage;
-
   return (
     <div className={styles.slider}>
-      <div
-        className={styles.Container}
-        style={{
-          transform: `translateX(${offset}%)`,
+      <Swiper
+        slidesPerView={isCertificates ? 4 : 1}
+        spaceBetween={20}
+        pagination={{
+          clickable: true,
         }}
+        autoplay={{
+          disableOnInteraction: false,
+        }}
+        modules={[Pagination, Autoplay]}
+        className={styles.swiperContainer}
       >
-        {dataMap()}
-      </div>
-      <div className={styles.pagination}>
-        {Array.from({ length: totalPages }, (_, index) => (
-          <span
-            key={index}
-            className={`${styles.dot} ${
-              currentPage === index ? styles.active : ""
-            }`}
-            onClick={() => handlePageChange(index)}
-          />
+        {dataMap().map((slide, index) => (
+          <SwiperSlide key={index}>{slide}</SwiperSlide>
         ))}
-      </div>
+      </Swiper>
+
       {/* Модальное окно для сертификатов */}
       {selectedCertificate && (
         <div className={styles.modalOverlay} onClick={onCloseModal}>

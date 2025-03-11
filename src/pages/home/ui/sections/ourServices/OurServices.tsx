@@ -1,6 +1,7 @@
+import { useEffect, useState } from "react";
 import styles from "./OurServices.module.css";
 
-const contentBlocks = [
+const contentBlocksFourCol = [
   {
     id: 1,
     type: "image",
@@ -75,14 +76,49 @@ const contentBlocks = [
   },
 ];
 
+const twoColOrder = [2, 1, 3, 4, 5, 6, 8, 7, 10, 9, 11, 12, 13, 14, 16, 15];
+const oneColOrder = [1, 2, 3, 4, 6, 5, 8, 7, 9, 10, 11, 12, 14, 13, 16, 15];
+
+const contentBlocksTwoCol = twoColOrder
+  .map((id) => contentBlocksFourCol.find((block) => block.id === id))
+  .filter((block) => block !== undefined);
+
+const contentBlocksOneCol = oneColOrder
+  .map((id) => contentBlocksFourCol.find((block) => block.id === id))
+  .filter((block) => block !== undefined);
+
 export const OurServices = () => {
+  const [currentBlocks, setCurrentBlocks] = useState(contentBlocksFourCol);
+
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth;
+
+      if (width > 1600) {
+        setCurrentBlocks(contentBlocksFourCol);
+      } else if (width >= 1000 && width <= 1600) {
+        setCurrentBlocks(contentBlocksTwoCol);
+      } else {
+        setCurrentBlocks(contentBlocksOneCol);
+      }
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <section className={styles.ourServices}>
       <div className={styles.sectionTitle}>
         <h2>Наши услуги</h2>
       </div>
       <div className={styles.cardsWrap}>
-        {contentBlocks.map((block, index) => (
+        {currentBlocks.map((block, index) => (
           <div key={index} className={styles.card}>
             {block.type === "image" ? (
               (() => {
@@ -96,7 +132,7 @@ export const OurServices = () => {
                       backgroundImage: `url(${bgUrl})`,
                     }}
                   >
-                    {<img src={iconUrl} className={styles.iconCard} />}
+                    <img src={iconUrl} className={styles.iconCard} />
                   </div>
                 );
               })()

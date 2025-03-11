@@ -11,7 +11,7 @@
 }
 
 .articleBlock h2 {
-  font-size: 1.75rem;
+  font-size: clamp(1.75rem, 3vw, 3rem);
   font-weight: 500;
   color: inherit;
 
@@ -25,7 +25,7 @@
 
   line-height: 1.4;
 
-  font-size: 0.9rem;
+  font-size: clamp(0.75rem, 1vw, 1.5rem);
   font-weight: 400;
 }
 
@@ -38,6 +38,8 @@
 
 .articleBlock li {
   position: relative;
+
+  font-size: clamp(0.75rem, 1vw, 1.5rem);
 
   line-height: 2rem;
 }
@@ -56,4 +58,14 @@
 
   left: -1rem;
   top: 0.9rem;
+}
+
+@media (min-width: 1920px) {
+  .description {
+    padding: 4.5rem 20rem;
+  }
+
+  .articleBlock li {
+    line-height: 2.2rem;
+  }
 }

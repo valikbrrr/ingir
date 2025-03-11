@@ -13,6 +13,10 @@
 }
 
 .presentationBlock {
+  /* display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column; */
   width: 35%;
   padding: 3rem;
 
@@ -34,6 +38,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  /* width: 90%; */
 
   gap: 1rem;
   height: 4rem;
@@ -162,12 +168,13 @@
 .fileLabel svg {
   width: 1.2rem;
   height: 1.2rem;
-  
+
   fill: #312c26;
 }
 
 .submitButton {
   width: 40%;
+  min-width: 8rem;
   padding: 1rem;
 
   font-size: 1rem;
@@ -186,4 +193,88 @@
   cursor: pointer;
 
   margin-top: 1rem;
+}
+
+@media (min-width: 1920px) {
+  .ContactWithUs {
+    padding: 4.5rem 20rem;
+  }
+
+  .presentationBlock {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .presentationBlock h2 {
+    text-align: center;
+  }
+}
+
+@media (min-width: 1600px) {
+  .formGroup input,
+  .formGroup textarea,
+  .fileLabel {
+    font-size: 1.3rem;
+    padding: 0.7rem;
+  }
+}
+
+@media (max-width: 1300px) {
+  .presentationBlock h2 {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .ContactWithUs {
+    flex-direction: column;
+  }
+
+  .presentationBlock {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .contactSection {
+    width: 100%;
+  }
+
+  .presentationBlock a {
+    display: contents;
+  }
+
+  .presentationWrap {
+    width: 90%;
+  }
+
+  @media (max-width: 900px) {
+    .formRow {
+      display: contents;
+    }
+    .contactForm {
+      gap: 1rem;
+    }
+    .submitButton {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 750px) {
+    .ContactWithUs {
+      padding: 4.5rem 5rem;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .ContactWithUs {
+      padding: 3rem 1rem;
+    }
+
+    .contactSection {
+      padding: 1rem;
+    }
+  }
 }

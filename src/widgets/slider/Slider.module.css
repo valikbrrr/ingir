@@ -1,5 +1,38 @@
 .slider {
   position: relative;
+}
+
+.swiperContainer {
+  position: relative;
+  padding-bottom: 40px; /* Отступ для пагинации */
+}
+
+.swiper-pagination {
+  position: absolute;
+  bottom: 0; /* Размещаем пагинацию внизу */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  gap: 8px; /* Расстояние между кружочками */
+}
+
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background-color: #ccc; /* Цвет неактивных кружочков */
+  border-radius: 50%;
+  opacity: 1;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #8a2be2; /* Фиолетовый цвет для активного кружочка */
+}
+
+/* .slider {
+  position: relative;
 
   width: 100%;
 
@@ -11,7 +44,7 @@
 .Container {
   display: flex;
   transition: transform 0.5s ease-in-out;
-}
+} */
 
 /* .certificateBlock {
   flex: 0 0 25%;
@@ -32,7 +65,7 @@
   border: none;
 } */
 
-.pagination {
+/* .pagination {
   display: flex;
   justify-content: center;
 
@@ -54,7 +87,7 @@
 
 .dot.active {
   background-color: #333;
-}
+} */
 
 /* Стили для модального окна */
 .modalOverlay {
@@ -105,7 +138,7 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
-.blockClient {
+/* .blockClient {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -150,4 +183,4 @@
 
 .dot.active {
   background-color: #8065f7;
-}
+} */

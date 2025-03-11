@@ -20,7 +20,7 @@
 
 .sectionTitle h2 {
   color: rgb(49, 44, 38);
-  font-size: 2rem;
+  font-size: clamp(2rem, 3vw, 3.5rem);
 }
 
 .cardsWrap {
@@ -54,10 +54,7 @@
   content: "";
 
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
 
   background-color: rgba(0, 0, 0, 0.7);
 
@@ -106,7 +103,7 @@
   position: absolute;
 
   content: "";
-  
+
   width: 3rem;
   height: 0.3rem;
 
@@ -114,4 +111,22 @@
   left: 2rem;
 
   background-color: #9b9b9b;
+}
+
+@media (min-width: 1920px) {
+  .ourServices {
+    padding: 4.5rem 20rem;
+  }
+}
+
+@media (max-width: 1600px) {
+  .card {
+    flex: 0 0 50%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .card {
+    flex: 0 0 100%;
+  }
 }
