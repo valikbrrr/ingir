@@ -119,14 +119,26 @@
   }
 }
 
-@media (max-width: 1600px) {
+@media (max-width: 1400px) {
   .card {
     flex: 0 0 50%;
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 800px) {
   .card {
     flex: 0 0 100%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .ourServices {
+    padding: 4rem 3rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .ourServices {
+    padding: 2rem 1rem;
   }
 }

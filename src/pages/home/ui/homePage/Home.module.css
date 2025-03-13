@@ -35,14 +35,9 @@
 }
 
 .certificates {
-   /* display: flex;
-  flex-direction: column;
-  justify-content: center; */
   padding: 4.5rem 10rem;
-  /* width: 100%; */
-  /* background-color: #f5f3f1; */
+
   color: #312c26;
-  /* box-sizing: border-box; */
 }
 
 .certificatesTitle {
@@ -58,12 +53,6 @@
 }
 
 .certificateBlock {
-  /* flex: 0 0 50%;
-
-  padding: 10px;
-
-  box-sizing: border-box; */
-
   cursor: pointer;
 }
 
@@ -150,5 +139,23 @@
 @media (max-width: 1000px) {
   .certificateBlock {
     flex: 0 0 50%;
+  }
+
+  .certificates {
+    padding: 4rem 3rem;
+  }
+
+  .ourClients {
+    padding: 4rem 3rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .certificates {
+    padding: 2rem 1rem;
+  }
+
+  .ourClients {
+    padding: 2rem 1rem;
   }
 }

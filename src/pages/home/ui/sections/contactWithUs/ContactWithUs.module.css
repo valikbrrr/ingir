@@ -174,7 +174,7 @@
 
 .submitButton {
   width: 40%;
-  min-width: 8rem;
+  /* min-width: 8rem; */
   padding: 1rem;
 
   font-size: 1rem;

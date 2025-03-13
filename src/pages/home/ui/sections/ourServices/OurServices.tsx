@@ -94,9 +94,9 @@ export const OurServices = () => {
     const handleResize = () => {
       const width = window.innerWidth;
 
-      if (width > 1600) {
+      if (width > 1400) {
         setCurrentBlocks(contentBlocksFourCol);
-      } else if (width >= 1000 && width <= 1600) {
+      } else if (width >= 800 && width <= 1400) {
         setCurrentBlocks(contentBlocksTwoCol);
       } else {
         setCurrentBlocks(contentBlocksOneCol);

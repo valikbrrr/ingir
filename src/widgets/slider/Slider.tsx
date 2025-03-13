@@ -24,14 +24,19 @@ export const Slider: React.FC<SliderProps> = ({
   return (
     <div className={styles.slider}>
       <Swiper
-        slidesPerView={isCertificates ? 4 : 1}
+        slidesPerView={isCertificates ? 4 : 5}
+        slidesPerGroup={isCertificates ? 4 : 1}
         spaceBetween={20}
         pagination={{
           clickable: true,
         }}
-        autoplay={{
-          disableOnInteraction: false,
-        }}
+        autoplay={
+          isCertificates
+            ? false
+            : {
+                disableOnInteraction: false,
+              }
+        }
         modules={[Pagination, Autoplay]}
         className={styles.swiperContainer}
       >

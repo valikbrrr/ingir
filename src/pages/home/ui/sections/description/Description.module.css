@@ -69,3 +69,15 @@
     line-height: 2.2rem;
   }
 }
+
+@media (max-width: 1000px) {
+  .description {
+    padding: 4rem 3rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .description {
+    padding: 2rem 1rem;
+  }
+}

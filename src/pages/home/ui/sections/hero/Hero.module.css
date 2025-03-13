@@ -38,7 +38,7 @@
 }
 
 .hero h3 {
-  font-size: clamp(3rem, 3vw, 4rem);
+  font-size: clamp(2rem, calc(1.66rem + 1.7vw), 4rem);
   font-weight: normal;
 
   margin-bottom: 1rem;
@@ -84,5 +84,17 @@
     width: 14rem;
 
     font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .hero .contentWrapper {
+    padding: 0 3rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero .contentWrapper {
+    padding: 0 1rem;
   }
 }
