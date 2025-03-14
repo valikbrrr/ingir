@@ -4,7 +4,7 @@
 
 .swiperContainer {
   position: relative;
-  padding-bottom: 40px; /* Отступ для пагинации */
+  padding-bottom: 60px; /* Отступ для пагинации */
 }
 
 .modalOverlay {

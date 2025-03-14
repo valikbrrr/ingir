@@ -125,19 +125,16 @@
   }
 }
 
-@media (max-width: 800px) {
-  .card {
-    flex: 0 0 100%;
-  }
-}
-
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
   .ourServices {
     padding: 4rem 3rem;
   }
 }
 
 @media (max-width: 700px) {
+  .card {
+    flex: 0 0 100%;
+  }
   .ourServices {
     padding: 2rem 1rem;
   }

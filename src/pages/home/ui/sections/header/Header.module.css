@@ -132,13 +132,16 @@ header .contentWrapper {
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
   .headerFixed {
     padding: 0 3rem;
   }
 }
 
 @media (max-width: 700px) {
+  .headerFixed {
+    height: 4rem;
+  }
   .phoneNumber {
     display: none;
   }

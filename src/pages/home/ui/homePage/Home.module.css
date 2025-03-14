@@ -37,6 +37,8 @@
 .certificates {
   padding: 4.5rem 10rem;
 
+  width: 100%;
+
   color: #312c26;
 }
 
@@ -53,16 +55,16 @@
 }
 
 .certificateBlock {
+  display: flex;
+  justify-content: center;
+
+  gap: 2rem;
   cursor: pointer;
 }
 
 .certificateImage {
   width: 100%;
-  height: auto;
-
-  display: block;
-
-  border: none;
+  height: 100%;
 }
 
 .ourClients {
@@ -136,7 +138,11 @@
   filter: grayscale(0%);
 }
 
-@media (max-width: 1000px) {
+.xxx {
+  width: 100%;
+}
+
+@media (max-width: 1200px) {
   .certificateBlock {
     flex: 0 0 50%;
   }

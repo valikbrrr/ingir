@@ -2,7 +2,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/swiper-bundle.css";
 import styles from "./Slider.module.css";
-import { JSX } from "react";
+import { JSX, useEffect, useState } from "react";
 
 interface SliderProps {
   dataMap: () => JSX.Element[];
@@ -21,11 +21,41 @@ export const Slider: React.FC<SliderProps> = ({
   isLoading,
   onCloseModal,
 }) => {
+  const [numberOfCertificateSlides, setNumberOfCertificateSlides] = useState(4);
+  const [numberOfClientSlides, setNumberOfClientSlides] = useState(5);
+
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth;
+
+      if (width > 1000) {
+        setNumberOfCertificateSlides(4);
+        setNumberOfClientSlides(5);
+      } else if (width >= 800 && width <= 1000) {
+        setNumberOfCertificateSlides(2);
+        setNumberOfClientSlides(3);
+      } else {
+        setNumberOfCertificateSlides(1);
+        setNumberOfClientSlides(2);
+      }
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <div className={styles.slider}>
       <Swiper
-        slidesPerView={isCertificates ? 4 : 5}
-        slidesPerGroup={isCertificates ? 4 : 1}
+        slidesPerView={
+          isCertificates ? numberOfCertificateSlides : numberOfClientSlides
+        }
+        slidesPerGroup={isCertificates ? numberOfCertificateSlides : 1}
         spaceBetween={20}
         pagination={{
           clickable: true,

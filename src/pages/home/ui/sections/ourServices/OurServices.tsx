@@ -96,7 +96,7 @@ export const OurServices = () => {
 
       if (width > 1400) {
         setCurrentBlocks(contentBlocksFourCol);
-      } else if (width >= 800 && width <= 1400) {
+      } else if (width >= 701 && width <= 1400) {
         setCurrentBlocks(contentBlocksTwoCol);
       } else {
         setCurrentBlocks(contentBlocksOneCol);
