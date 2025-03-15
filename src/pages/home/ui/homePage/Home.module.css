@@ -50,7 +50,7 @@
 }
 
 .certificatesTitle h2 {
-  font-size: clamp(1rem, 2vw, 3rem);
+  font-size: clamp(1.5rem, 2vw, 3rem);
   font-weight: 700;
 }
 
@@ -153,6 +153,14 @@
 
   .ourClients {
     padding: 4rem 3rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .certificateImage {
+    object-fit: contain;
+    max-height: 300px;
+    max-width: 200px;
   }
 }
 

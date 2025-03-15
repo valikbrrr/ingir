@@ -95,6 +95,7 @@ export const Home = () => {
               </div>
             ))
           }
+          
           isCertificates={true}
           totalPages={CERTIFICATES_MAP.length}
           selectedCertificate={selectedCertificate}

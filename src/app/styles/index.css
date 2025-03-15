@@ -15,6 +15,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.swiper-slide {
+  margin: auto 0;
+}
+
 #root {
   display: flex;
   justify-content: center;

@@ -31,7 +31,7 @@ export const Slider: React.FC<SliderProps> = ({
       if (width > 1000) {
         setNumberOfCertificateSlides(4);
         setNumberOfClientSlides(5);
-      } else if (width >= 800 && width <= 1000) {
+      } else if (width >= 700 && width <= 1000) {
         setNumberOfCertificateSlides(2);
         setNumberOfClientSlides(3);
       } else {
