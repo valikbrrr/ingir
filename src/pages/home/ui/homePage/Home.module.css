@@ -172,4 +172,14 @@
   .ourClients {
     padding: 2rem 1rem;
   }
+
+  .scrollTop {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  .scrollTop svg {
+    width: 2rem;
+    height: 2rem;
+  }
 }
