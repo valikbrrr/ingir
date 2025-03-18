@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import styles from "./OurServices.module.css";
+import { SectionTitle } from "@widgets/sectionTitle";
 
 const contentBlocksFourCol = [
   {
@@ -114,9 +115,7 @@ export const OurServices = () => {
 
   return (
     <section className={styles.ourServices}>
-      <div className={styles.sectionTitle}>
-        <h2>Наши услуги</h2>
-      </div>
+      <SectionTitle text="Наши услуги" />
       <div className={styles.cardsWrap}>
         {currentBlocks.map((block, index) => (
           <div key={index} className={styles.card}>

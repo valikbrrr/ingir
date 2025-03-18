@@ -13,16 +13,6 @@
   box-sizing: border-box;
 }
 
-.sectionTitle {
-  display: flex;
-  justify-content: center;
-}
-
-.sectionTitle h2 {
-  color: rgb(49, 44, 38);
-  font-size: clamp(2rem, 3vw, 3.5rem);
-}
-
 .cardsWrap {
   display: flex;
   flex-wrap: wrap;

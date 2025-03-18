@@ -106,6 +106,10 @@ header .contentWrapper {
   font-size: clamp(1rem, 1vw, 1.5rem);
 }
 
+.enter:hover {
+  cursor: pointer;
+}
+
 .enter p::after {
   content: "";
 

@@ -1,4 +1,4 @@
-.ContactWithUs {
+.contactWithUs {
   display: flex;
 
   padding: 4.5rem 10rem;
@@ -226,7 +226,7 @@
 }
 
 @media (max-width: 1200px) {
-  .ContactWithUs {
+  .contactWithUs {
     flex-direction: column;
   }
 
@@ -263,13 +263,13 @@
   }
 
   @media (max-width: 750px) {
-    .ContactWithUs {
+    .contactWithUs {
       padding: 4.5rem 5rem;
     }
   }
 
   @media (max-width: 500px) {
-    .ContactWithUs {
+    .contactWithUs {
       padding: 3rem 1rem;
     }
 

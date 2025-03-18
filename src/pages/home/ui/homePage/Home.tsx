@@ -12,6 +12,7 @@ import {
   OurServices,
 } from "../sections";
 import { Slider } from "@widgets/slider";
+import { SectionTitle } from "@widgets/sectionTitle";
 
 export const Home = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -76,9 +77,7 @@ export const Home = () => {
       <ContactWithUs />
       {/* СЕРТИФИКАТЫ */}
       <section className={styles.certificates}>
-        <div className={styles.certificatesTitle}>
-          <h2>Сертификаты</h2>
-        </div>
+        <SectionTitle text="Сертификаты" />
         <Slider
           dataMap={() =>
             CERTIFICATES_MAP.map((certificate) => (
@@ -95,7 +94,6 @@ export const Home = () => {
               </div>
             ))
           }
-          
           isCertificates={true}
           totalPages={CERTIFICATES_MAP.length}
           selectedCertificate={selectedCertificate}
@@ -105,9 +103,7 @@ export const Home = () => {
       </section>
       {/* КЛИЕНТЫ */}
       <section className={styles.ourClients}>
-        <div className={styles.ourClientsTitle}>
-          <h2>Наши клиенты</h2>
-        </div>
+        <SectionTitle text="Наши Клиенты" />
         <Slider
           dataMap={() =>
             CLIENTS_MAP.map((client) => (

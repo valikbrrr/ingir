@@ -42,18 +42,6 @@
   color: #312c26;
 }
 
-.certificatesTitle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 2rem;
-}
-
-.certificatesTitle h2 {
-  font-size: clamp(1.5rem, 2vw, 3rem);
-  font-weight: 700;
-}
-
 .certificateBlock {
   display: flex;
   justify-content: center;
@@ -81,33 +69,6 @@
   box-sizing: border-box;
 }
 
-.ourClientsTitle {
-  margin-bottom: 3rem;
-}
-
-.ourClientsTitle h2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  gap: 3rem;
-
-  font-size: clamp(1.5rem, 2vw, 3rem);
-  font-weight: 700;
-}
-
-.ourClientsTitle h2::before {
-  content: "";
-  border-bottom: 1px solid #ebebeb;
-  flex-grow: 1;
-}
-
-.ourClientsTitle h2::after {
-  content: "";
-  border-bottom: 1px solid #ebebeb;
-  flex-grow: 1;
-}
-
 .blockClient {
   display: flex;
   align-items: center;
@@ -120,6 +81,8 @@
   box-sizing: border-box;
 
   cursor: pointer;
+
+  margin-top: 3rem;
 }
 
 .clientImage {
@@ -136,10 +99,6 @@
 
 .clientImage:hover {
   filter: grayscale(0%);
-}
-
-.xxx {
-  width: 100%;
 }
 
 @media (max-width: 1200px) {

@@ -1,5 +1,6 @@
 import { RequestIcon, StafIcon, UniformOrderIcon } from "@shared/assets";
 import styles from "./ourAdvantages.module.css";
+import { SectionTitle } from "@widgets/sectionTitle";
 
 export const OurAdvantages = () => {
   // Массив данных для карточек
@@ -38,10 +39,7 @@ export const OurAdvantages = () => {
 
   return (
     <section className={styles.ourAdvantages}>
-      <div className={styles.ourAdvantagesTitle}>
-        <h2>Наши преимущества</h2>
-      </div>
-
+      <SectionTitle text="Наши преимущества" />
       <div className={styles.ourAdvantagesCards}>
         {advantagesCards.map((card, index) => (
           <div key={index} className={styles.card}>

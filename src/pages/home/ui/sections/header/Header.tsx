@@ -1,6 +1,7 @@
 import { bgHeader, EngirLogo, LogIcon } from "@shared/assets";
 import styles from "./Header.module.css";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export const Header = () => {
   const [isHeaderVisible, setIsHeaderVisible] = useState(false);
@@ -23,6 +24,12 @@ export const Header = () => {
       window.removeEventListener("scroll", handleScrollForHeader);
     };
   }, []);
+
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/login");
+  };
 
   return (
     <header
@@ -49,7 +56,7 @@ export const Header = () => {
               EN
             </a>
           </div>
-          <a href="" className={styles.enter}>
+          <a className={styles.enter} onClick={handleClick}>
             <LogIcon />
             <p>вход</p>
           </a>

@@ -1,0 +1,26 @@
+.blockTitle {
+  margin-bottom: 3rem;
+}
+
+.blockTitle h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 3rem;
+
+  font-size: clamp(1.5rem, calc(1.27rem + 1.15vw), 3rem);
+  font-weight: 700;
+}
+
+.blockTitle h2::before {
+  content: "";
+  border-bottom: 1px solid #ebebeb;
+  flex-grow: 1;
+}
+
+.blockTitle h2::after {
+  content: "";
+  border-bottom: 1px solid #ebebeb;
+  flex-grow: 1;
+}
