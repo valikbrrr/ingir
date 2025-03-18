@@ -1,5 +1,7 @@
 .slider {
   position: relative;
+
+  margin-top: 3rem;
 }
 
 .swiperContainer {

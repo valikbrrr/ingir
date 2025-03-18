@@ -31,9 +31,14 @@ export const Header: React.FC<HeaderProps> = ({ isFixed }) => {
 
   const navigate = useNavigate();
 
-  const handleClick = () => {
+  const toAuthorization = () => {
     navigate("/login");
   };
+
+  const toHome = () => {
+    navigate("/");
+  };
+
 
   return (
     <header
@@ -50,7 +55,7 @@ export const Header: React.FC<HeaderProps> = ({ isFixed }) => {
     >
       <div className={styles.contentWrapper}>
         <div className={styles.leftContent}>
-          <EngirLogo />
+          <EngirLogo onClick={toHome}/>
           <a href="tel: +375 (17) 388 06 75" className={styles.phoneNumber}>
             +375 (17) 388 06 75
           </a>
@@ -65,7 +70,7 @@ export const Header: React.FC<HeaderProps> = ({ isFixed }) => {
               EN
             </a>
           </div>
-          <a className={styles.enter} onClick={handleClick}>
+          <a className={styles.enter} onClick={toAuthorization}>
             <LogIcon />
             <p>вход</p>
           </a>

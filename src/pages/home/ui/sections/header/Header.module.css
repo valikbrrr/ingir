@@ -50,6 +50,10 @@ header .contentWrapper {
   height: clamp(1.2rem, calc(0.89rem + 1.53vw), 3rem);
 }
 
+.leftContent svg:hover {
+  cursor: pointer;
+}
+
 .leftContent .phoneNumber {
   font-weight: 700;
 }

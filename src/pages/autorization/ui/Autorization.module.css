@@ -1,13 +1,38 @@
 .container {
+  display: flex;
+
+  gap: 2.5rem;
+
+  flex-direction: column;
   position: relative;
 
   width: 100%;
 }
 
 .mainContent {
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 40rem;
+
+  flex-direction: column;
+
+  height: 20rem;
+  width: 100%;
+  /* max-width: 75rem; */
+
+  background-image: url("src/shared/assets/images/bgLoginForm.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* .form {
+  background-image: url("src/shared/assets/images/bgLoginForm.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+} */
+
+.textEnterInfo {
+  margin-top: 3rem;
 }
