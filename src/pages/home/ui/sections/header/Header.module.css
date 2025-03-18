@@ -1,4 +1,4 @@
-.headerFixed {
+.header {
   display: flex;
   align-items: center;
 
@@ -125,7 +125,7 @@ header .contentWrapper {
 }
 
 @media (min-width: 1920px) {
-  .headerFixed {
+  .header {
     padding: 0 20rem;
   }
 }
@@ -137,20 +137,18 @@ header .contentWrapper {
 }
 
 @media (max-width: 1200px) {
-  .headerFixed {
+  .header {
     padding: 0 3rem;
   }
 }
 
 @media (max-width: 700px) {
-  .headerFixed {
+  .header {
     height: 4rem;
+    padding: 0 1rem;
   }
   .phoneNumber {
     display: none;
-  }
-  .headerFixed {
-    padding: 0 1rem;
   }
 }
 

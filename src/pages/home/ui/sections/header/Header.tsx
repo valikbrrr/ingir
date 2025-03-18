@@ -3,7 +3,11 @@ import styles from "./Header.module.css";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-export const Header = () => {
+interface HeaderProps {
+  isFixed: boolean;
+}
+
+export const Header: React.FC<HeaderProps> = ({ isFixed }) => {
   const [isHeaderVisible, setIsHeaderVisible] = useState(false);
 
   const scrollThresholdHeader = 200;
@@ -33,10 +37,15 @@ export const Header = () => {
 
   return (
     <header
-      className={styles.headerFixed}
+      className={styles.header}
       style={{
-        backgroundImage: isHeaderVisible ? `url(${bgHeader})` : "none",
+        background: isFixed
+          ? isHeaderVisible
+            ? `url(${bgHeader})`
+            : "none"
+          : "rgb(45, 45, 46)",
         transition: "opacity 0.5s",
+        position: isFixed ? "fixed" : "relative", // Управляем позиционированием
       }}
     >
       <div className={styles.contentWrapper}>

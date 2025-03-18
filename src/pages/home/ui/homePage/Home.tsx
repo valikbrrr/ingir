@@ -69,7 +69,7 @@ export const Home = () => {
           <ArrowTop />
         </button>
       )}
-      <Header />
+      <Header isFixed={true}/>
       <Hero />
       <OurServices />
       <Description />
