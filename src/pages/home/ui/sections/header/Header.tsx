@@ -70,7 +70,7 @@ export const Header: React.FC<HeaderProps> = ({ isFixed }) => {
               EN
             </a>
           </div>
-          <a className={styles.enter} onClick={toAuthorization}>
+          <a href="#" className={styles.enter} onClick={toAuthorization}>
             <LogIcon />
             <p>вход</p>
           </a>

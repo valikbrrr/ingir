@@ -16,9 +16,7 @@
 
   flex-direction: column;
 
-  height: 20rem;
   width: 100%;
-  /* max-width: 75rem; */
 
   background-image: url("src/shared/assets/images/bgLoginForm.png");
   background-size: cover;
@@ -26,13 +24,112 @@
   background-repeat: no-repeat;
 }
 
-/* .form {
-  background-image: url("src/shared/assets/images/bgLoginForm.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-} */
+.form {
+  width: 50%;
+  max-width: 35rem;
+  text-align: center;
+}
 
 .textEnterInfo {
-  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.formGroup {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.formGroup input,
+.formGroup textarea {
+  padding: 0.5rem;
+  font-size: 1rem;
+
+  background-color: #f4f4f4;
+
+  border: 1px solid #f4f4f4;
+  border-radius: 4px;
+
+  outline: none;
+
+  margin-bottom: 2.5rem;
+}
+
+.submitButton {
+  width: 100%;
+  /* min-width: 8rem; */
+  padding: 1rem;
+
+  font-size: 1rem;
+  font-weight: 700;
+
+  background-color: #fff;
+
+  border: 0.15rem solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(
+    90deg,
+    rgb(180, 48, 221) 0px,
+    rgb(255, 95, 178)
+  );
+
+  cursor: pointer;
+}
+
+.providersBlock {
+  display: flex;
+
+  gap: 1rem;
+
+  margin: 1.5rem 0 0 1rem;
+}
+
+.block svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.block p {
+  font-size: 0.9rem;
+  opacity: 70%;
+}
+
+.securedText {
+  margin-top: 1rem;
+
+  color: #666;
+
+  text-align: left;
+  font-size: 0.8rem;
+}
+
+.securedText span {
+  color: #3366cc;
+}
+
+.securedText span a {
+  color: #3366cc;
+  text-decoration: none;
+}
+
+.securedText span a:hover {
+  text-decoration: underline;
+}
+
+.helpBlock {
+  margin-top: 2rem;
+}
+
+.fogotPassword {
+  color: #312c26;
+  margin-right: 2rem;
+}
+
+.register {
+  color: #ff5fb2;
+}
+
+.fogotPassword:hover,
+.register:hover {
+  text-decoration: none;
 }
