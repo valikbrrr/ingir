@@ -2,10 +2,18 @@ import { Footer, Header } from "@pages/home";
 import styles from "./Autorization.module.css";
 import { SectionTitle } from "@widgets/sectionTitle";
 import { Facebook, Google, Linkedin } from "@shared/assets";
+import { useNavigate } from "react-router-dom";
 
 export const Autorization = () => {
+  const navigate = useNavigate();
 
-  
+  const toPasswordReset = () => {
+    navigate("/password-reset");
+  };
+  const toRegistration = () => {
+    navigate("/registration");
+  };
+
   return (
     <div className={styles.container}>
       <Header isFixed={false} />
@@ -61,8 +69,16 @@ export const Autorization = () => {
           </p>
         </form>
         <div className={styles.helpBlock}>
-          <a href="#" className={styles.fogotPassword} onClick={}>Забыли пароль?</a>
-          <a href="#" className={styles.register} onClick={}>Зарегистрироваться</a>
+          <a
+            href="#"
+            className={styles.fogotPassword}
+            onClick={toPasswordReset}
+          >
+            Забыли пароль?
+          </a>
+          <a href="#" className={styles.register} onClick={toRegistration}>
+            Зарегистрироваться
+          </a>
         </div>
       </div>
       <Footer />
