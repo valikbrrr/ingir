@@ -50,7 +50,7 @@ export const Header: React.FC<HeaderProps> = ({ isFixed }) => {
             : "none"
           : "rgb(45, 45, 46)",
         transition: "opacity 0.5s",
-        position: isFixed ? "fixed" : "relative", // Управляем позиционированием
+        position: isFixed ? "fixed" : "relative", 
       }}
     >
       <div className={styles.contentWrapper}>

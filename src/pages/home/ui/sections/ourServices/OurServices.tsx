@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import styles from "./OurServices.module.css";
 import { SectionTitle } from "@widgets/sectionTitle";
+import { serviceBackgrounds, serviceIcons } from "@shared/assets/images/services";
+
 
 const contentBlocksFourCol = [
   {
@@ -121,8 +123,8 @@ export const OurServices = () => {
           <div key={index} className={styles.card}>
             {block.type === "image" ? (
               (() => {
-                const iconUrl = `src/shared/assets/images/services/icons/${block.id}.svg`;
-                const bgUrl = `src/shared/assets/images/services/bgs/${block.id}.jpg`;
+                const iconUrl = serviceIcons[block.id];
+                const bgUrl = serviceBackgrounds[block.id];
 
                 return (
                   <div

@@ -37,6 +37,7 @@
 }
 
 .logoBlock svg {
+  width: 20rem;
   height: clamp(1.2rem, calc(0.89rem + 1.53vw), 3rem);
 }
 
@@ -164,6 +165,10 @@
   .footerTop {
     position: relative;
     padding: 0 3rem 3rem 3rem;
+  }
+
+  .logoBlock svg {
+    width: clamp(10rem, calc(6.36rem + 18.18vw), 20rem);
   }
 
   .footerBottom {
