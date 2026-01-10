@@ -30,6 +30,8 @@
   background-color: #ccc;
 
   z-index: 0;
+
+  opacity: 40%;
 }
 
 .logoBlock {
